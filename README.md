@@ -11,25 +11,27 @@ Debemos ver más allá de las suposiciones, los métodos tradicionales ya no son
 
 ### Pasos para abordar el problema.
 
-1. Definición de problema y objetivo: Debemos comprender qué quiero lograr con el análisis y la predicción, para escoger cuales datos son buenos y cuales no. (Puede parecer obvio)
+Estos pasos son analogos a casi cualqueir problema de machine learning.
 
-2. ¿Que datos tenemos?: Especificar que datos usaremos y si los tenemos disponibles para extraerlos y analizarlos. Algunas fuentes son los sistemas CRM, los servicios de análisis y encuestas de satisfacción del cliente.
+1. **Definición de problema y objetivo**: Debemos comprender qué quiero lograr con el análisis y la predicción, para escoger cuales datos son buenos y cuales no. (Puede parecer obvio)
 
-3. Preparación, exploración y preprocesamiento de datos: Una vez tenemos los datos debemos analizarlos para limpiarlos y crear modelos predictivos debemos transformarlos en formatos adecuados para los algoritmos de Machine Learning . Este paso es crucial para mejroar los resultados generales al aumentar la calidad de los datos.
+2. **¿Que datos tenemos?**: Especificar que datos usaremos y si los tenemos disponibles para extraerlos y analizarlos. Algunas fuentes son los sistemas CRM, los servicios de análisis y encuestas de satisfacción del cliente.
 
-4. Crear modelos y probar: Esto es el desarrollo de varios modelos de predicción y su posterior prueba para validar su eficacia.
+3. **Preparación, exploración y preprocesamiento de datos**: Una vez tenemos los datos debemos analizarlos para limpiarlos y crear modelos predictivos debemos transformarlos en formatos adecuados para los algoritmos de Machine Learning . Este paso es crucial para mejroar los resultados generales al aumentar la calidad de los datos.
 
-5. Escoger el mejor modelo e implementarlo con datos reales: En esta ultima etapa el modelo más adecuado se despliega a producción. Puede integrarse en un software existente o crear una interfaz de usuario para que lo aprovechen otros miembros del equipo. Este es un proceso iterativo y puedes volver a etapas anteriores para hacer correciones.
+4. **Crear modelos y probar**: Esto es el desarrollo de varios modelos de predicción y su posterior prueba para validar su eficacia.
+
+5. **Escoger el mejor modelo e implementarlo con datos reales**: En esta ultima etapa el modelo más adecuado se despliega a producción. Puede integrarse en un software existente o crear una interfaz de usuario para que lo aprovechen otros miembros del equipo. Este es un proceso iterativo y puedes volver a etapas anteriores para hacer correciones.
 
 ### Planteamiento.
 
-Voy a usar un Dataset de una compañia de Telecomunicaciones, estos datos están bastante completos pero requieren procesarlos y acondicionarlos para representarlos en los diferentes algoritmos de clasificación, como **XGBoost, Arboles de decision y Random Forest, además de LinearRegression para clasificación** ya que nuestro objetivo principal es crear un modelo robusto "que pueda predecir el perfil de **clientes que son propensos a abandonar"** y asi tomar acciones a tiempo para retenerlos, es sabido que **retener clientes es mucho mas barato que captar nuevos.**
+Por mi partee, voy a usar un Dataset de una compañia de Telecomunicaciones, estos datos están bastante completos pero requieren procesarlos para representarlos de la mejor maneara en los diferentes algoritmos de clasificación, como **XGBoost, Arboles de decision y Random Forest, además de LinearRegression para clasificación** ya que nuestro objetivo principal es crear un modelo robusto "que pueda predecir el perfil de **clientes que son propensos a abandonar"** y asi tomar acciones a tiempo para retenerlos, es sabido que **retener clientes es mucho mas barato que captar nuevos.**
 
 ### Análisis BI.
 
 [Anteriormente ya habia analizado estos datos con Pandas y Power BI](https://github.com/ricardobrein/BI-analysis-Abandono_de_clientes-Maven-Telecom) y creé un informe sobre ellos con las posibles medidas a tomar. Este Repositorio es complementario con aquel ya que utilizamos los mismo datos, esta vez para crear varios modelos de clasificación que, como he mencionado, nos ayuden a identificar clientes propensos a abandonar la compañia. Esto es importante para crear estrategias para evitarlo o reducirlo, por ejemplo, **creando campañas de marketing proactivas dirigidas a los clientes que están a punto de abandonar.**
 
-Cuando una empresa, que tiene como modelo de negocio la suscripcion en el tiempo, logra capturar efectivamente los datos de los clientes y sus comportamiento el Machine Learning y el análisis de datos son formas poderosas de identificar y predecir la rotación trabajando sobre aspectos como:
+Cuando una empresa tiene como modelo de negocio la suscripción, logra capturar efectivamente los datos de los clientes y sus comportamientos,  el Machine Learning y el análisis de datos son herramientas poderosas para identificar y predecir la rotación trabajando sobre aspectos como:
 
 - Identificar clientes en riesgo.
 - Identificar fallos en nuestra compañía y los intereses y comportamientos del cliente.
@@ -62,23 +64,23 @@ En el modelo construido con **oversampling**, igualando la variable objetivo con
 La clases( 0 y 1) son nuestra variable objetivo _churn = no  y churn = yes_ vemos que logramos buenos resultados a predecir ambas clases, destacando los de el modelo Random Forest.
 
 **Logistic Regression:**
-Accuracy: 0.836231884057971
-Precision: 0.8495934959349594
-Recall: 0.8140214216163584
-F1-score: 0.8314271506713079
+ Accuracy: 0.836231884057971
+ Precision: 0.8495934959349594
+ Recall: 0.8140214216163584
+ F1-score: 0.8314271506713079
 
-Classification Report:
+    Classification Report:
                precision    recall  f1-score   support
 
            0       0.82      0.86      0.84      1043
            1       0.85      0.81      0.83      1027
 ---------------------------------------------------------------------
 **Decision Tree:**
-Accuracy: 0.8318840579710145
-Precision: 0.8224121557454891
-Recall: 0.8432327166504382
-F1-score: 0.8326923076923077
-Classification Report:
+ Accuracy: 0.8318840579710145
+ Precision: 0.8224121557454891
+ Recall: 0.8432327166504382
+ F1-score: 0.8326923076923077
+    Classification Report:
                precision    recall  f1-score   support
 
            0       0.84      0.82      0.83      1043
@@ -86,12 +88,12 @@ Classification Report:
 ----------------------------------------------------------------------
 
 **Random Forest:**
-Accuracy: 0.8830917874396135
-Precision: 0.9067357512953368
-Recall: 0.8519961051606622
-F1-score: 0.8785140562248995
+ Accuracy: 0.8830917874396135
+ Precision: 0.9067357512953368
+ Recall: 0.8519961051606622
+ F1-score: 0.8785140562248995
 
-Classification Report:
+    Classification Report:
                precision    recall  f1-score   support
 
            0       0.86      0.91      0.89      1043
@@ -107,12 +109,12 @@ Son resultados bastante aceptables si sospechamos que con oversampling el modelo
     1 = Churn No. (La clase mayoritaria.)
 
 **Logistic Regression:**
-Accuracy: 0.8559261887863733
-Precision: 0.8931947069943289
-Recall: 0.9130434782608695
-F1-score: 0.9030100334448161
+ Accuracy: 0.8559261887863733
+ Precision: 0.8931947069943289
+ Recall: 0.9130434782608695
+ F1-score: 0.9030100334448161
 
-Classification Report:
+    Classification Report:
                precision    recall  f1-score   support
 
            0       0.74      0.70      0.72       374
@@ -120,24 +122,24 @@ Classification Report:
 
 ----------------------------------------------------------------
 **Decision Tree:**
-Accuracy: 0.7998580553584103
-Precision: 0.8673170731707317
-Recall: 0.8589371980676328
-F1-score: 0.8631067961165048
-
-Classification Report:
+ Accuracy: 0.7998580553584103
+ Precision: 0.8673170731707317
+ Recall: 0.8589371980676328
+ F1-score: 0.8631067961165048
+ 
+    Classification Report:
                precision    recall  f1-score   support
 
            0       0.62      0.64      0.63       374
            1       0.87      0.86      0.86      1035
 ----------------------------------------------------------------
 **Random Forest:**
-Accuracy: 0.8545067423704755
-Precision: 0.88003663003663
-Recall: 0.9285024154589372
-F1-score: 0.9036201222378938
+ Accuracy: 0.8545067423704755
+ Precision: 0.88003663003663
+ Recall: 0.9285024154589372
+ F1-score: 0.9036201222378938
 
-Classification Report:
+    Classification Report:
                precision    recall  f1-score   support
 
            0       0.77      0.65      0.70       374
