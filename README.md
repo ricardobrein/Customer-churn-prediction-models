@@ -104,9 +104,9 @@ La clases( 0 y 1) son nuestra variable objetivo _churn = no  y churn = yes_ vemo
 
 **Un enfoque similar sin aplicar oversampling era aplicar stratify = y en Train_test_split con los siguientes resultados.**
 
-Son resultados bastante aceptables si sospechamos que con oversampling el modelo se sobreajusta y no generaliza demasiado bien
+Son resultados bastante aceptables si sospechamos que el oversampling hace que el  modelo se sobreajuste y no generalize demasiado bien datos no vistos.
 
-    0 = Churn Yes
+    0 = Churn Yes (Minoría)
     1 = Churn No. (La clase mayoritaria.)
 
 **Logistic Regression:**
@@ -115,7 +115,7 @@ Son resultados bastante aceptables si sospechamos que con oversampling el modelo
  Recall: 0.9130434782608695
  F1-score: 0.9030100334448161
 
-    Classification Report:
+    Reporte de Clasificacíon:
                precision    recall  f1-score   support
 
            0       0.74      0.70      0.72       374
@@ -128,7 +128,7 @@ Son resultados bastante aceptables si sospechamos que con oversampling el modelo
  Recall: 0.8589371980676328
  F1-score: 0.8631067961165048
  
-    Classification Report:
+    Reporte de Clasificación:
                precision    recall  f1-score   support
 
            0       0.62      0.64      0.63       374
@@ -140,7 +140,7 @@ Son resultados bastante aceptables si sospechamos que con oversampling el modelo
  Recall: 0.9285024154589372
  F1-score: 0.9036201222378938
 
-    Classification Report:
+    Reporte de Clasificación:
                precision    recall  f1-score   support
 
            0       0.77      0.65      0.70       374
