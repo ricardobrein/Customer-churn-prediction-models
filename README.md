@@ -69,7 +69,7 @@ La clases( 0 y 1) son nuestra variable objetivo _churn = no  y churn = yes_ vemo
  Recall: 0.8140214216163584
  F1-score: 0.8314271506713079
 
-    Classification Report:
+    Reporte de Clasificación:
                precision    recall  f1-score   support
 
            0       0.82      0.86      0.84      1043
@@ -80,7 +80,8 @@ La clases( 0 y 1) son nuestra variable objetivo _churn = no  y churn = yes_ vemo
  Precision: 0.8224121557454891
  Recall: 0.8432327166504382
  F1-score: 0.8326923076923077
-    Classification Report:
+    
+    Reporte de Clasificación:
                precision    recall  f1-score   support
 
            0       0.84      0.82      0.83      1043
@@ -93,7 +94,7 @@ La clases( 0 y 1) son nuestra variable objetivo _churn = no  y churn = yes_ vemo
  Recall: 0.8519961051606622
  F1-score: 0.8785140562248995
 
-    Classification Report:
+    Reporte de Clasificación:
                precision    recall  f1-score   support
 
            0       0.86      0.91      0.89      1043
@@ -147,7 +148,7 @@ Son resultados bastante aceptables si sospechamos que con oversampling el modelo
 
 ![Curva ROC AUC sin oversampling](media/Curva_roc_modelos_stratify.png)
 
-## Por ultimo Un modelo que me gusta mucho y que da excelentes resultados es el aclamado XGBoost que también usa enfoque de arboles de decision pero debiles y les aplica Boosting.
+#### Por ultimo Un modelo que me gusta mucho y que tiene excelentes resultados, es el aclamado XGBoost, también usa enfoque de arboles de decision "Débiles" y les aplica Boosting.
 
 ![Curva ROC AUC sin oversampling](media/curva_roc_XGBOOST.png)
 
@@ -157,9 +158,11 @@ Sin aplicar oversampling a los datos y casi con los parametros por defecto logra
 
 En este repositorio les conté un poco acerca de la **construccion de Modelos para prediccion de abandono de clientes (Churn),** me parece importante ya que se ha convertido practicamente en un caso clásico para trabajarlo con Machine Learning debido a la cantidad de usos reales a los que se puede aplicar. Ensamblé distintos modelos gracias al [dataset del Churn Challenge de Maven Analytics](https://www.mavenanalytics.io/blog/maven-churn-challenge), aunque hay muchos otros, este me parecio el más interesante y completo.
 
-Aprendí que los modelos con mejor desempeño fueron el de Bosques Aleatorios (Random Forest) con oversampling aplicado, seguido de el de XGBoost que dió excelentes resultados aun sin oversampling, Tanto XGBoost como Random Forest son algoritmos conocidos como "ensemble models" que se basan en la combinación de múltiples modelos (árboles de decisión) para mejorar el rendimiento de la predicción  son considerados unos de los más efectivos para problemas de clasificación.
+Aprendí que **los modelos con mejor desempeño fueron el de Bosques Aleatorios (Random Forest)** con oversampling aplicado, seguido de el de XGBoost que dió excelentes resultados aun sin oversampling, Tanto XGBoost como Random Forest son algoritmos **conocidos como "ensemble models"** que se basan en la combinación de múltiples modelos (árboles de decisión) para mejorar el rendimiento de la predicción  son considerados unos de los más efectivos para problemas de clasificación.
 
 También aprendí a entender la importancia del manejo del desbalance de las variables dependientes e independientes.
+
+    Gracias por leer. ;)
 
 
 
