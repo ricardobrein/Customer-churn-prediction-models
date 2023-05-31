@@ -38,16 +38,16 @@ Cuando una empresa tiene como modelo de negocio la suscripción, logra capturar 
 - Identificar fallos en nuestra compañía y los intereses y comportamientos del cliente.
 - Identificar estrategias/métodos para reducir la rotación y aumentar la retención.
 
-### Casos de Uso de el análisis de abandono.
+### Casos a los que se puede aplicar un análisis de rotación.
 
-La predicción de abandono de clientes varía según la línea de negocio (LoB) de cada empresa, también depende de los datos disponibles y los objetivos que se busquen, es interesante entender el negocio para aplicarlo correcatamente en cada caso. El modelo debe adaptarse a las necesidades, objetivos y expectativas de la empresa. Por ejemplo, algunos casos de uso son:
+La predicción de abandono de clientes varía según la línea de negocio (LoB) de cada empresa, depende también de los datos disponibles y los objetivos que se busquen, es interesante entender el negocio para aplicarlo correcatamente en cada caso. El modelo debe adaptarse a las necesidades, objetivos y expectativas de la empresa. Por ejemplo, algunos casos de uso son:
 
-Telecomunicaciones (Su modelo de negocio va dirigido a retener a los clientes durante el mayor tiempo).
-Software as a Service (SaaS).  Modelos de pago por uso: servicios cloud, AWS,GPC, Azure, Microsoft 365.
-Empresas basadas en suscripción (servicios de streaming de video, música, etc.).
-Instituciones financieras (bancarias, compañías de seguros, Sociedades Hipotecarias, etc.).
-Marketing.
-Gestión de Recursos Humanos (rotación de empleados).
+- Telecomunicaciones (Su modelo de negocio va dirigido a retener a los clientes durante el mayor tiempo).
+- Software as a Service (SaaS).  Modelos de pago por uso: servicios cloud, AWS,GPC, Azure, Microsoft 365.
+- Empresas basadas en suscripción (servicios de streaming de video, música, etc.).
+- Instituciones financieras (bancarias, compañías de seguros, Sociedades Hipotecarias, etc.).
+- Marketing.
+- Gestión de Recursos Humanos (rotación de empleados).
 
 ### Construccion del modelo.
 
