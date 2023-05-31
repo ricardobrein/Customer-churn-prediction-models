@@ -7,7 +7,7 @@ La tasa de abandono es crítica si queremos entender la satisfacción del client
 
 [Segun este informe de Callminer,](https://learning.callminer.com/c/whitepaper-churn-index-2020?x=CFl8z6&xs=225891#page=1) **la rotación cuesta a las empresas en Estados Unidos un estimado de $ 168 mil millones anuales.** Esto se debe a que pequeños porcentajes sumados se convierten en una gran perdida de ganancias reales. 
 
-    Un abandono del 2% de clientes para una empresa que factura 5 millones anuales se traduce en 100,000€ en ingresos perdidos. Por otra parte está el costo de atraer nuevos clientes lo cual suele ser más costoso que retener a los actuales. Todo esto, logicamente tiene un impacto en el crecimiento del negocio.
+  Un abandono del 2% de clientes para una empresa que factura 5 millones anuales se traduce en 100,000€ en ingresos perdidos. Por otra parte está el costo de atraer nuevos clientes lo cual suele ser más costoso que retener a los actuales. Todo esto, logicamente tiene un impacto en el crecimiento del negocio.
 
 Debemos ver más allá de las suposiciones, los métodos tradicionales ya no son suficientes para saber las causas o qué hacer con la rotación. Es mejor usar los datos que podemos recolectar de nuestros clientes para entender su comportamiento y a partir de ahí, tomar decisiones basadas en datos, identificar tendencias y patrones que nos lleven a conclusiones firmes.
 
