@@ -3,11 +3,10 @@
 ### Introducción
 Cuando se trata de aplicaciones útiles del Machine Learning en un área comercial, nada representa mejor esto que que la predicción de abandono de clientes. Es un problema en el que generalmente se tienen una buena calidad y cantidad de datos, es relativamente sencillo y resolverlo puede suponer un aumento de la retencion del clientes, por lo tanto aumento de ganancias.
 
-La tasa de abandono es crítica si queremos entender la satisfacción del cliente. Tasas de abandono bajas = clientes satisfechos; las altas tasas de abandono significan que algo anda mal. **Lo que puede parecer pequeña tasa de rotación mensual o trimestral se acumula y ese 1% se traducirá rápidamente en 12 % de abandono anual.**
+La tasa de abandono es crítica si queremos entender la satisfacción del cliente. Tasas de abandono bajas = clientes satisfechos; las altas tasas de abandono significan que algo anda mal. **Lo que puede parecer pequeña tasa de rotación mensual o trimestral se acumula y ese 1% se traducirá rápidamente en 12 % de abandono anual.** Un abandono del 2% de clientes para una empresa que factura 5 millones anuales se traduce en 100,000€ en ingresos perdidos.
 
-[Segun este informe de Callminer,](https://learning.callminer.com/c/whitepaper-churn-index-2020?x=CFl8z6&xs=225891#page=1) **la rotación cuesta a las empresas en Estados Unidos un estimado de $ 168 mil millones anuales.** Esto se debe a que pequeños porcentajes sumados se convierten en una gran perdida de ganancias reales. 
-
-  Un abandono del 2% de clientes para una empresa que factura 5 millones anuales se traduce en 100,000€ en ingresos perdidos. Por otra parte está el costo de atraer nuevos clientes lo cual suele ser más costoso que retener a los actuales. Todo esto, logicamente tiene un impacto en el crecimiento del negocio.
+[Segun este informe de Callminer,](https://learning.callminer.com/c/whitepaper-churn-index-2020?x=CFl8z6&xs=225891#page=1) **la rotación cuesta a las empresas en Estados Unidos un estimado de $ 168 mil millones anuales.** Esto se debe a que pequeños porcentajes sumados se convierten en una gran perdida de ganancias reales. Por otra parte está el costo de atraer nuevos clientes lo cual suele ser mayor al de retener a los actuales. 
+Todo esto, logicamente tiene un impacto en el crecimiento del negocio.
 
 Debemos ver más allá de las suposiciones, los métodos tradicionales ya no son suficientes para saber las causas o qué hacer con la rotación. Es mejor usar los datos que podemos recolectar de nuestros clientes para entender su comportamiento y a partir de ahí, tomar decisiones basadas en datos, identificar tendencias y patrones que nos lleven a conclusiones firmes.
 
