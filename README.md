@@ -10,7 +10,7 @@ La tasa de abandono es crítica si queremos entender la satisfacción del client
 
 Debemos ver más allá de las suposiciones, los métodos tradicionales ya no son suficientes para saber las causas o qué hacer con la rotación. Es mejor usar los datos que podemos recolectar de nuestros clientes para entender su comportamiento y a partir de ahí, tomar decisiones basadas en datos, identificar tendencias y patrones que nos lleven a conclusiones firmes.
 
-### Pasos para abordar el problema.
+## Pasos para abordar el problema.
 
 Estos pasos son analogos a casi cualqueir problema de machine learning.
 
@@ -24,11 +24,11 @@ Estos pasos son analogos a casi cualqueir problema de machine learning.
 
 5. **Escoger el mejor modelo e implementarlo con datos reales**: En esta ultima etapa el modelo más adecuado se despliega a producción. Puede integrarse en un software existente o crear una interfaz de usuario para que lo aprovechen otros miembros del equipo. Este es un proceso iterativo y puedes volver a etapas anteriores para hacer correciones.
 
-### Planteamiento.
+## Planteamiento.
 
 Por mi partee, voy a usar un Dataset de una compañia de Telecomunicaciones, estos datos están bastante completos pero requieren procesarlos para representarlos de la mejor maneara en los diferentes algoritmos de clasificación, como **XGBoost, Arboles de decision y Random Forest, además de LinearRegression para clasificación** ya que nuestro objetivo principal es crear un modelo robusto "que pueda predecir el perfil de **clientes que son propensos a abandonar"** y asi tomar acciones a tiempo para retenerlos, es sabido que **retener clientes es mucho mas barato que captar nuevos.**
 
-### Análisis BI.
+## Análisis BI.
 
 [Anteriormente ya habia analizado estos datos con Pandas y Power BI](https://github.com/ricardobrein/BI-analysis-Abandono_de_clientes-Maven-Telecom) y creé un informe sobre ellos con las posibles medidas a tomar. Este Repositorio es complementario con aquel ya que utilizamos los mismo datos, esta vez para crear varios modelos de clasificación que, como he mencionado, nos ayuden a identificar clientes propensos a abandonar la compañia. Esto es importante para crear estrategias para evitarlo o reducirlo, por ejemplo, **creando campañas de marketing proactivas dirigidas a los clientes que están a punto de abandonar.**
 
