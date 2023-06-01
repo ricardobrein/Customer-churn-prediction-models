@@ -124,13 +124,9 @@ En el modelo construido con **oversampling**, (igualando la variable objetivo co
 
 ![Curva ROC AUC](media/curva_roc_modelos_oversampling.png)
 
-    .
+    > "La precisión no es una buena métrica para usar cuando tienes un desequilibrio de clases."
 
 **Un enfoque similar sin aplicar oversampling era aplicar stratify = y en Train_test_split con los siguientes resultados.**
-
-> La precisión no es una buena métrica para usar cuando tienes un desequilibrio de clases.
-
-Son resultados bastante aceptables si sospechamos que el oversampling hace que el  modelo se sobreajuste y no generalize demasiado bien datos no vistos.
 
     0 = Churn Yes (Minoría)
     1 = Churn No. (La clase mayoritaria.)
@@ -171,6 +167,7 @@ Son resultados bastante aceptables si sospechamos que el oversampling hace que e
 
            0       0.77      0.65      0.70       374
            1       0.88      0.93      0.90      1035
+    Son resultados bastante aceptables en casos donde detectamos un sobreajuste del modelo al utilizar oversampling.
 
 ![Curva ROC AUC sin oversampling](media/Curva_roc_modelos_stratify.png)
 
