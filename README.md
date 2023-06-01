@@ -57,26 +57,26 @@ En nuestro caso la variable objetivo "Customer Status" tiene un desbalance ya qu
 
 Por otro lado, habian variables categoricas binarias y multi-clase, las cuales es conveniente convertirlas en representaciones numéricas mediante técnicas de Encoding. Al igual que algunas variables numéricas que, por su alta variabilidad, tuve que escalar y normalizar para asegurar que tengan un impacto equilibrado en el modelo final.
 
-[Notebook del codigo del modelo]
+[Notebook del codigo del modelo](https://github.com/ricardobrein/Customer-churn-prediction-models/blob/main/Prediccion_de_abandono_de_clientes_XGboost_LR.ipynb)
 
 ### Evaluación del modelo 
 
 En los modelos de ML en clasificacion podemos usar ciertas metricas.
 
-1. Precisión: La precisión mide la proporción de ejemplos positivos que fueron clasificados correctamente como positivos, es decir, la capacidad del modelo para no etiquetar incorrectamente ejemplos negativos como positivos. **Se calcula dividiendo el número de verdaderos positivos (TP) entre la suma de los verdaderos positivos y los falsos positivos (FP):
+1. **Precisión:** La precisión mide la proporción de ejemplos positivos que fueron clasificados correctamente como positivos, es decir, la capacidad del modelo para no etiquetar incorrectamente ejemplos negativos como positivos. **Se calcula dividiendo el número de verdaderos positivos (TP) entre la suma de los verdaderos positivos y los falsos positivos (FP):
 
 Precisión = TP / (TP + FP)
 
-2. Recall: También conocido como sensibilidad o tasa de verdaderos positivos, el recall mide la proporción de ejemplos positivos que fueron clasificados correctamente como positivos en relación con todos los ejemplos positivos reales.
+2. **Recall:** También conocido como sensibilidad o tasa de verdaderos positivos, el recall mide la proporción de ejemplos positivos que fueron clasificados correctamente como positivos en relación con todos los ejemplos positivos reales.
 
 Recall = TP / (TP + FN)
 
-3. F1 score = (media) * (precision * recall) / (precision + recall)
+3. **F1 score** = (media) * (precision * recall) / (precision + recall)
 
-4. La Análisis de la curva ROC
+4. **Análisis de la curva ROC**
 [Curva ROC] (https://es.wikipedia.org/wiki/Curva_ROC)
 
-ROC, (Receiver Operating Characteristic) y el área bajo la curva (AUC) son métricas normalmente utilizadas para evaluar el rendimiento de modelos de clasificación.
+ROC, **(Receiver Operating Characteristic)** y el área under the curve **(AUC)** son métricas normalmente utilizadas para evaluar el rendimiento de modelos de clasificación.
 
 En términos sencillos, la curva ROC representa **la relación entre la tasa de verdaderos positivos (recall o sensibilidad) y la tasa de falsos positivos (1 - especificidad)** a medida que se ajusta el umbral de clasificación del modelo. La curva ROC muestra cómo el modelo equilibra la capacidad para identificar correctamente las instancias positivas (verdaderos positivos) y la tasa de negativos clasificados incorrectamente como positivas (falsos positivos).
 
