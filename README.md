@@ -183,13 +183,15 @@ Sin aplicar oversampling a los datos y casi con los parametros por defecto logra
 
 ## Resumen de mi experiencia con este caso.
 
-En este repositorio les conté un poco acerca de la **construccion de Modelos para prediccion de abandono de clientes (Churn),** me parece importante ya que se ha convertido practicamente en un caso clásico para trabajarlo con Machine Learning debido a la cantidad de usos reales a los que se puede aplicar. Ensamblé distintos modelos gracias al [dataset del Churn Challenge de Maven Analytics](https://www.mavenanalytics.io/blog/maven-churn-challenge), aunque hay muchos otros, este me parecio el más interesante y completo.
+En este repositorio les conté un poco acerca de la **construccion de Modelos para prediccion de abandono de clientes (Churn),** me parece un tema importante que se ha convertido ya, en un caso clásico para trabajarlo con Machine Learning, teniendo en cuenta la cantidad de casos reales a los que se puede aplicar. 
 
-Los resultados que obtuve no fueron inmediatos, pase una cantidad considerable de horas leyendo y haciendo pruebas, para construir los modelos con caracteristicas que fueran las adecuadas y además que no se sobreajustara a los datos de entrenamiento, Ahora, tengo una idea completa de cómo funcionan estos modelos y en que casos es mejor utilizarlos.
+Ensamblé distintos modelos gracias al [dataset del Churn Challenge de Maven Analytics](https://www.mavenanalytics.io/blog/maven-churn-challenge), aunque hay muchos otros, este me parecio el más interesante y completo.
 
-Aprendí que **los modelos con mejor desempeño fueron el de Bosques Aleatorios (Random Forest)** con oversampling aplicado, seguido de el de XGBoost que dió excelentes resultados aun sin oversampling, Tanto XGBoost como Random Forest son algoritmos **conocidos como "ensemble models"** que se basan en la combinación de múltiples modelos (árboles de decisión) para mejorar el rendimiento de la predicción  son considerados unos de los más efectivos para problemas de clasificación.
+Los resultados que obtuve no fueron inmediatos, estuve una cantidad considerable de horas leyendo y haciendo pruebas para construir los modelos con las características adecuadas y que, además no se sobreajustara a los datos de entrenamiento. Ahora, tengo una idea completa de cómo funcionan estos modelos y en que casos es mejor utilizarlos.
 
-También aprendí a entender la importancia del manejo del desbalance de las variables dependientes e independientes.
+Aprendí que **los modelos con mejor desempeño fueron el de Bosques Aleatorios (Random Forest)** con oversampling aplicado, seguido de el de XGBoost que dió excelentes resultados aún sin oversampling, Tanto XGBoost como Random Forest son algoritmos **conocidos como "ensemble models", se basan en la **combinación de múltiples modelos (árboles de decisión) para mejorar el rendimiento de la predicción**  unos de los más efectivos para problemas de clasificación.
+
+Para construir modelos capaces de genearlizar bien, es importante **manejar el desbalance de las variables dependientes e independientes.**
 
     Gracias por leer. ;)
     
