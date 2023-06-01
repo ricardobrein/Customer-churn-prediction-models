@@ -67,6 +67,8 @@ En los modelos de ML en clasificacion podemos usar ciertas metricas.
 
 Precisión = TP / (TP + FP)
 
+**_La precisión no es una buena métrica cuando tienes un desequilibrio de clases._**
+
 2. **Recall:** También conocido como sensibilidad o tasa de verdaderos positivos, el recall mide la proporción de ejemplos positivos que fueron clasificados correctamente como positivos en relación con todos los ejemplos positivos reales.
 
 Recall = TP / (TP + FN)
@@ -83,7 +85,7 @@ En términos sencillos, la curva ROC representa **la relación entre la tasa de 
 **El área bajo la curva (AUC)** es una métrica numérica que resume el rendimiento de la curva ROC. El valor del AUC varía entre 0 y 1, donde un valor de 1 indica un modelo perfecto que clasifica correctamente todas las instancias(en la mayoria de casos no sería deseable ya que indica sobreajuste hacia los datos de entrenamiento) y un valor de 0.5 indica que el modelo clasifica aleatoriamente.
 En el modelo construido con **oversampling**, (igualando la variable objetivo con las varibales de entrenamiento) obtuve buenos resultados de precision, recall, y f1 score.**
 
-### Modelo 1: Datos con oversampling utilizando la técnica SMOTE.
+## Modelo 1: Datos con oversampling utilizando la técnica SMOTE.
 
 > La clases( 0 y 1) son nuestra variable objetivo _churn = no  y churn = yes_ vemos que logramos buenos resultados a predecir ambas clases, destacando los de el modelo Random Forest.
 
@@ -126,9 +128,7 @@ En el modelo construido con **oversampling**, (igualando la variable objetivo co
 
 ![Curva ROC AUC](media/curva_roc_modelos_oversampling.png)
 
-    _"La precisión no es una buena métrica para usar cuando tienes un desequilibrio de clases."_
-
-### Modelo 2: sin oversampling aplicado, simplemente con el hiperparametro stratify = y en la división de los datos.
+## Modelo 2: sin oversampling aplicado, simplemente con el hiperparametro stratify = y en la división de los datos.
 
     0 = Churn Yes (Minoría)
     1 = Churn No. (La clase mayoritaria.)
@@ -170,11 +170,11 @@ En el modelo construido con **oversampling**, (igualando la variable objetivo co
            0       0.77      0.65      0.70       374
            1       0.88      0.93      0.90      1035
 
-**Son resultados bastante aceptables en casos donde detectamos un sobreajuste del modelo al utilizar oversampling.**
+**Son resultados bastante aceptables en casos donde no deseamos utilizar oversampling que es más agresivo y sensible al sobreajuste**
 
 ![Curva ROC AUC sin oversampling](media/Curva_roc_modelos_stratify.png)
 
-### El aclamado XGBoost.
+## El aclamado XGBoost.
 Por ultimo Un modelo que me gusta mucho y que tiene excelentes resultados, es XGBoost también usa enfoque de arboles de decision llamdos arboles weak o "Débiles" y les aplica Boosting para ensamblar un modelo final, en este caso los datos de entrenamiento estan divididos con Stratify = y, sin oversampling.
 
 ![Curva ROC XGBOOST](media/curva_roc_XGBOOST.png)
@@ -185,11 +185,20 @@ Sin aplicar oversampling a los datos y casi con los parametros por defecto logra
 
 En este repositorio les conté un poco acerca de la **construccion de Modelos para prediccion de abandono de clientes (Churn),** me parece importante ya que se ha convertido practicamente en un caso clásico para trabajarlo con Machine Learning debido a la cantidad de usos reales a los que se puede aplicar. Ensamblé distintos modelos gracias al [dataset del Churn Challenge de Maven Analytics](https://www.mavenanalytics.io/blog/maven-churn-challenge), aunque hay muchos otros, este me parecio el más interesante y completo.
 
+Los resultados que obtuve no fueron inmediatos, pase una cantidad considerable de horas leyendo y haciendo pruebas, para construir los modelos con caracteristicas que fueran las adecuadas y además que no se sobreajustara a los datos de entrenamiento, Ahora, tengo una idea completa de cómo funcionan estos modelos y en que casos es mejor utilizarlos.
+
 Aprendí que **los modelos con mejor desempeño fueron el de Bosques Aleatorios (Random Forest)** con oversampling aplicado, seguido de el de XGBoost que dió excelentes resultados aun sin oversampling, Tanto XGBoost como Random Forest son algoritmos **conocidos como "ensemble models"** que se basan en la combinación de múltiples modelos (árboles de decisión) para mejorar el rendimiento de la predicción  son considerados unos de los más efectivos para problemas de clasificación.
 
 También aprendí a entender la importancia del manejo del desbalance de las variables dependientes e independientes.
 
     Gracias por leer. ;)
+    
+## Conocimientos:
+https://towardsdatascience.com/the-f1-score-bec2bbc38aa6
+https://www.mavenanalytics.io/blog/maven-churn-challenge
+http://rstudio-pubs-static.s3.amazonaws.com/277278_427ca6a7ce7c4eb688506efc7a6c2435.html
+https://www.kaggle.com/code/farazrahman/telco-customer-churn-logisticregression/notebook
+https://neptune.ai/blog/how-to-implement-customer-churn-prediction
 
 
 
