@@ -53,7 +53,7 @@ La predicción de abandono de clientes varía según la línea de negocio (LoB) 
 
 Construir un modelo efectivo presenta desafíos que tienen relación con la existencia de datos inexactos o desordenados, debemos también conocer contexto del negocio para entender los datos y hacer la seleccion de caracteristicas adecuadas, manejar datos faltantes y desequilibrio en datos. Superar estos desafíos es fundamental para desarrollar un modelo útil y eficaz.
 
-En nuestro caso la variable objetivo "Customer Status" tiene un desbalance ya que de los 7043 clientes solo 1869 han abandonado la compañia, esto podria llevar a modelos sesgados hacia la clase dominante, en este caso los clientes actuales. Utilice dos enfoques para manejarlo, la estratificación y el Oversampling con la tecnica **SMOTE.**
+En nuestro caso la variable objetivo "Customer Status" tiene un desbalance ya que de los 7043 clientes solo 1869 han abandonado la compañia, esto podria llevar a modelos sesgados hacia la clase dominante, en este caso los clientes actuales. Utilice dos enfoques para manejarlo, la estratificación y el Oversampling con la técnica **SMOTE.**
 
 Por otro lado, habian variables categoricas binarias y multi-clase, las cuales es conveniente convertirlas en representaciones numéricas mediante técnicas de Encoding. Al igual que algunas variables numéricas que, por su alta variabilidad, tuve que escalar y normalizar para asegurar que tengan un impacto equilibrado en el modelo final.
 
@@ -82,6 +82,8 @@ En términos sencillos, la curva ROC representa **la relación entre la tasa de 
 
 **El área bajo la curva (AUC)** es una métrica numérica que resume el rendimiento de la curva ROC. El valor del AUC varía entre 0 y 1, donde un valor de 1 indica un modelo perfecto que clasifica correctamente todas las instancias(en la mayoria de casos no sería deseable ya que indica sobreajuste hacia los datos de entrenamiento) y un valor de 0.5 indica que el modelo clasifica aleatoriamente.
 En el modelo construido con **oversampling**, (igualando la variable objetivo con las varibales de entrenamiento) obtuve buenos resultados de precision, recall, y f1 score.**
+
+### Modelo 1: Datos con oversampling utilizando la técnica SMOTE.
 
 > La clases( 0 y 1) son nuestra variable objetivo _churn = no  y churn = yes_ vemos que logramos buenos resultados a predecir ambas clases, destacando los de el modelo Random Forest.
 
@@ -124,18 +126,18 @@ En el modelo construido con **oversampling**, (igualando la variable objetivo co
 
 ![Curva ROC AUC](media/curva_roc_modelos_oversampling.png)
 
-    > "La precisión no es una buena métrica para usar cuando tienes un desequilibrio de clases."
+    _"La precisión no es una buena métrica para usar cuando tienes un desequilibrio de clases."_
 
-**Un enfoque similar sin aplicar oversampling era aplicar stratify = y en Train_test_split con los siguientes resultados.**
+### Modelo 2: sin oversampling aplicado, simplemente con el hiperparametro stratify = y en la división de los datos.
 
     0 = Churn Yes (Minoría)
     1 = Churn No. (La clase mayoritaria.)
 
 **Logistic Regression:**
- Accuracy: 0.8559261887863733
- Precision: 0.8931947069943289
- Recall: 0.9130434782608695
- F1-score: 0.9030100334448161
+ - Accuracy: 0.8559261887863733
+ - Precision: 0.8931947069943289
+ - Recall: 0.9130434782608695
+ - F1-score: 0.9030100334448161
 
     Reporte de Clasificacíon:
                precision    recall  f1-score   support
@@ -145,10 +147,10 @@ En el modelo construido con **oversampling**, (igualando la variable objetivo co
 
 ----------------------------------------------------------------
 **Decision Tree:**
- Accuracy: 0.7998580553584103
- Precision: 0.8673170731707317
- Recall: 0.8589371980676328
- F1-score: 0.8631067961165048
+ - Accuracy: 0.7998580553584103
+ - Precision: 0.8673170731707317
+ - Recall: 0.8589371980676328
+ - F1-score: 0.8631067961165048
  
     Reporte de Clasificación:
                precision    recall  f1-score   support
@@ -157,23 +159,25 @@ En el modelo construido con **oversampling**, (igualando la variable objetivo co
            1       0.87      0.86      0.86      1035
 ----------------------------------------------------------------
 **Random Forest:**
- Accuracy: 0.8545067423704755
- Precision: 0.88003663003663
- Recall: 0.9285024154589372
- F1-score: 0.9036201222378938
+ - Accuracy: 0.8545067423704755
+ - Precision: 0.88003663003663
+ - Recall: 0.9285024154589372
+ - F1-score: 0.9036201222378938
 
     Reporte de Clasificación:
                precision    recall  f1-score   support
 
            0       0.77      0.65      0.70       374
            1       0.88      0.93      0.90      1035
-    Son resultados bastante aceptables en casos donde detectamos un sobreajuste del modelo al utilizar oversampling.
+
+**Son resultados bastante aceptables en casos donde detectamos un sobreajuste del modelo al utilizar oversampling.**
 
 ![Curva ROC AUC sin oversampling](media/Curva_roc_modelos_stratify.png)
 
-#### Por ultimo Un modelo que me gusta mucho y que tiene excelentes resultados, es el aclamado XGBoost, también usa enfoque de arboles de decision "Débiles" y les aplica Boosting.
+### El aclamado XGBoost.
+Por ultimo Un modelo que me gusta mucho y que tiene excelentes resultados, es XGBoost también usa enfoque de arboles de decision llamdos arboles weak o "Débiles" y les aplica Boosting para ensamblar un modelo final, en este caso los datos de entrenamiento estan divididos con Stratify = y, sin oversampling.
 
-![Curva ROC AUC sin oversampling](media/curva_roc_XGBOOST.png)
+![Curva ROC XGBOOST](media/curva_roc_XGBOOST.png)
 
 Sin aplicar oversampling a los datos y casi con los parametros por defecto logramos una AUC de 0.93.
 
