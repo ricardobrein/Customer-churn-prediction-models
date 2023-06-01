@@ -1,4 +1,6 @@
 ## Prediccion de abandono de Clientes (Churn) con XGBoost, LinearRegression y RandomForest
+
+![Abandono de clientes](media/header.jpeg)
  
 ### Introducción
 Cuando se trata de aplicaciones útiles del Machine Learning en un área comercial, nada representa mejor esto que que la predicción de abandono de clientes. Es un problema en el que generalmente se tienen una buena calidad y cantidad de datos, es relativamente sencillo y resolverlo puede suponer un aumento de la retencion del clientes, por lo tanto aumento de ganancias.
