@@ -124,6 +124,8 @@ En el modelo construido con **oversampling**, (igualando la variable objetivo co
 
 ![Curva ROC AUC](media/curva_roc_modelos_oversampling.png)
 
+    .
+
 **Un enfoque similar sin aplicar oversampling era aplicar stratify = y en Train_test_split con los siguientes resultados.**
 
 > La precisión no es una buena métrica para usar cuando tienes un desequilibrio de clases.
