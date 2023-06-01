@@ -14,7 +14,7 @@ Debemos ver más allá de las suposiciones, los métodos tradicionales ya no son
 
 ## Pasos para abordar el problema.
 
-Estos pasos son analogos a casi cualqueir problema de machine learning.
+Estos pasos son análogos a casi cualquier estudio en Machine Learning.
 
 1. **Definición de problema y objetivo**: Debemos comprender qué quiero lograr con el análisis y la predicción, para escoger cuales datos son buenos y cuales no. (Puede parecer obvio)
 
