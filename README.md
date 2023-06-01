@@ -59,10 +59,31 @@ Por otro lado, habian variables categoricas binarias y multi-clase, las cuales e
 
 [Notebook del codigo del modelo]
 
+### Evaluación del modelo 
 
-En el modelo construido con **oversampling**, igualando la variable objetivo con las varibales de entrenamiento obtuve los siguientes resultados de precision, recall, y f1 score.**
+En los modelos de ML en clasificacion podemos usar ciertas metricas.
 
-La clases( 0 y 1) son nuestra variable objetivo _churn = no  y churn = yes_ vemos que logramos buenos resultados a predecir ambas clases, destacando los de el modelo Random Forest.
+1. Precisión: La precisión mide la proporción de ejemplos positivos que fueron clasificados correctamente como positivos, es decir, la capacidad del modelo para no etiquetar incorrectamente ejemplos negativos como positivos. **Se calcula dividiendo el número de verdaderos positivos (TP) entre la suma de los verdaderos positivos y los falsos positivos (FP):
+
+Precisión = TP / (TP + FP)
+
+2. Recall: También conocido como sensibilidad o tasa de verdaderos positivos, el recall mide la proporción de ejemplos positivos que fueron clasificados correctamente como positivos en relación con todos los ejemplos positivos reales.
+
+Recall = TP / (TP + FN)
+
+3. F1 score = (media) * (precision * recall) / (precision + recall)
+
+4. La Análisis de la curva ROC
+[Curva ROC] (https://es.wikipedia.org/wiki/Curva_ROC)
+
+ROC, (Receiver Operating Characteristic) y el área bajo la curva (AUC) son métricas normalmente utilizadas para evaluar el rendimiento de modelos de clasificación.
+
+En términos sencillos, la curva ROC representa **la relación entre la tasa de verdaderos positivos (recall o sensibilidad) y la tasa de falsos positivos (1 - especificidad)** a medida que se ajusta el umbral de clasificación del modelo. La curva ROC muestra cómo el modelo equilibra la capacidad para identificar correctamente las instancias positivas (verdaderos positivos) y la tasa de negativos clasificados incorrectamente como positivas (falsos positivos).
+
+**El área bajo la curva (AUC)** es una métrica numérica que resume el rendimiento de la curva ROC. El valor del AUC varía entre 0 y 1, donde un valor de 1 indica un modelo perfecto que clasifica correctamente todas las instancias(en la mayoria de casos no sería deseable ya que indica sobreajuste hacia los datos de entrenamiento) y un valor de 0.5 indica que el modelo clasifica aleatoriamente.
+En el modelo construido con **oversampling**, (igualando la variable objetivo con las varibales de entrenamiento) obtuve buenos resultados de precision, recall, y f1 score.**
+
+> La clases( 0 y 1) son nuestra variable objetivo _churn = no  y churn = yes_ vemos que logramos buenos resultados a predecir ambas clases, destacando los de el modelo Random Forest.
 
 **Logistic Regression:**
  Accuracy: 0.836231884057971
@@ -104,6 +125,8 @@ La clases( 0 y 1) son nuestra variable objetivo _churn = no  y churn = yes_ vemo
 ![Curva ROC AUC](media/curva_roc_modelos_oversampling.png)
 
 **Un enfoque similar sin aplicar oversampling era aplicar stratify = y en Train_test_split con los siguientes resultados.**
+
+> La precisión no es una buena métrica para usar cuando tienes un desequilibrio de clases.
 
 Son resultados bastante aceptables si sospechamos que el oversampling hace que el  modelo se sobreajuste y no generalize demasiado bien datos no vistos.
 
